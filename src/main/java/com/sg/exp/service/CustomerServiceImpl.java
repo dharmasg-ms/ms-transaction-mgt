@@ -29,8 +29,8 @@ public class CustomerServiceImpl implements CustomerService {
 	@Transactional
 	// A Proxy is Created that wraps the function insert
 	// BeginTransaction
-	public String insert(Customer student) {
-		Customer save = customerRepository.save(student); // Call to the Repository
+	public String insert(Customer customer) {
+		Customer save = customerRepository.save(customer); // Call to the Repository
 		if (save.getCustomerId() == 2) {
 			int a = 1 / 0;
 			System.out.println("The value of A is : " + a);
@@ -46,8 +46,8 @@ public class CustomerServiceImpl implements CustomerService {
 	@Transactional
 	// A Proxy is Created that wraps the function delete
 	// BeginTransaction
-	public String delete(int StudentId) {
-		customerRepository.deleteById(StudentId);
+	public String delete(int customerId) {
+		customerRepository.deleteById(customerId);
 		return "The CUstomer is successfully deleted from the database";
 	}
 	// Commit Transaction

@@ -36,7 +36,7 @@ public class CustomerController {
 
 	@DeleteMapping("/delete")
 	public String delete(Integer customerId) {
-		if(customerId==null){customerId=4;}
+
 		String result = customerService.delete(customerId);
 		return result;
 	}

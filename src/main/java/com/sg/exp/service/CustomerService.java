@@ -8,5 +8,5 @@ public interface CustomerService {
 
 	public List<Customer> retrieve();
 	public String insert(Customer customer);
-	public String delete(int customerId);
+	public String delete(Integer customerId);
 }

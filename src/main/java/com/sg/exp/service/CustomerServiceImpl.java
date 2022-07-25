@@ -46,7 +46,8 @@ public class CustomerServiceImpl implements CustomerService {
 	@Transactional
 	// A Proxy is Created that wraps the function delete
 	// BeginTransaction
-	public String delete(int customerId) {
+	public String delete(Integer customerId) {
+		System.out.println(customerId);
 		customerRepository.deleteById(customerId);
 		return "The CUstomer is successfully deleted from the database";
 	}

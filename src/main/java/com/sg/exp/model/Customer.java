@@ -1,5 +1,7 @@
 package com.sg.exp.model;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 public class Customer {
 
 	@Id
-	int customerId;
+	Integer customerId;
 	String customerName;
 	int customerAge;
 
